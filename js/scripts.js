@@ -1,17 +1,26 @@
 $(document).ready(function () {
-  $("form#fav").submit(function (event) {
+  $("form#num").submit(function (event) {
     event.preventDefault();
-    const favFood = $("input#favoritefood").val();
-    const favColor = $("input#favoritecolor").val();
-    const favMovie = $("input#favoritemovie").val();
-    let favorites = [favFood, favColor, favMovie];
-    let newFave = favorites.pop();
-    const favOne = favorites[0];
-    const favTwo = favorites[1];
-    //alert(favOne);
-    //alert(favTwo);
-    $("ul").append("<li>" + favOne + "</li>");
-    $("ul").append("<li>" + favTwo + "</li>");
+    const upToInt = parseInt($("input#upto").val());
+    const multInt = parseInt($("input#multiple").val());
+    
+
+     
+    let countArr = [];
+    
+    for (let index = multInt; index <= upToInt; index += multInt ) {
+      countArr.push(" " + index);
+      //console.log(countArr);
+    }
+    
+    $(".answer").text(countArr).show();
+    
+    
+    //for ( let index = 0; index < countArr.length; index += 1 ) {
+      //index = index.concat("<li>" + countArr[index] +  "<li>");
+    //}
+    //$("ul").append("<li>" + favOne + "</li>");
+    //$("ul").append("<li>" + favTwo + "</li>");
 
   });
 });
