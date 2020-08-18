@@ -8,8 +8,8 @@ $(document).ready(function () {
     let newFave = favorites.pop();
     const favOne = favorites[0];
     const favTwo = favorites[1];
-    alert(favOne);
-    alert(favTwo);
+    //alert(favOne);
+    //alert(favTwo);
     $("ul").append("<li>" + favOne + "</li>");
     $("ul").append("<li>" + favTwo + "</li>");
 
